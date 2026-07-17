@@ -1,0 +1,56 @@
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+
+    background-image:url("images/roses.jpg");
+    background-repeat:repeat;
+    background-size:300px;
+
+    color:#222;
+}
+
+header{
+    background-color:#b30000;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    margin:15px;
+}
+
+main{
+    width:80%;
+    margin:30px auto;
+    background-color:rgba(255,255,255,.92);
+    padding:25px;
+    border-radius:12px;
+}
+
+section{
+    margin-bottom:30px;
+}
+
+footer{
+    background-color:#b30000;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+section img{
+    display:block;
+    margin:20px auto;
+    width:450px;
+    max-width:100%;
+    border-radius:15px;
+    border:5px solid #b30000;
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
+}
