@@ -1,56 +1,299 @@
-body{
-    margin:0;
-    font-family:Arial, sans-serif;
+/* Google Font pairing */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&display=swap');
 
+
+/* ===========================
+   GENERAL PAGE STYLING
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-family:'Roboto', Arial, sans-serif;
     background-image:url("images/roses.jpg");
     background-repeat:repeat;
     background-size:300px;
-
     color:#222;
+    line-height:1.6;
 }
+
+
+/* Type selectors used:
+   body, header, nav, main,
+   section, article, footer
+*/
+
 
 header{
     background-color:#b30000;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:32px 16px;
 }
 
-nav{
-    margin-top:10px;
+
+header h1{
+    font-family:'Playfair Display', serif;
+    font-size:48px;
+    margin-bottom:8px;
 }
+
+
+header p{
+    font-size:18px;
+}
+
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:16px;
+}
+
 
 nav a{
     color:white;
+    background-color:#7d0000;
     text-decoration:none;
     font-weight:bold;
-    margin:15px;
+    padding:8px 16px;
+    border-radius:24px;
 }
+
+
+nav a:hover{
+    background-color:#ff4d4d;
+}
+
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
 
 main{
     width:80%;
-    margin:30px auto;
+    max-width:1200px;
+    margin:32px auto;
     background-color:rgba(255,255,255,.92);
-    padding:25px;
-    border-radius:12px;
+    padding:32px;
+    border-radius:16px;
 }
 
+
 section{
-    margin-bottom:30px;
+    margin-bottom:32px;
+    padding:24px;
+    border-radius:16px;
+    background-color:#fffafa;
 }
+
+
+section h2{
+    font-family:'Playfair Display', serif;
+    color:#b30000;
+    font-size:32px;
+    margin-bottom:16px;
+}
+
+
+section h3{
+    color:#7d0000;
+    margin-bottom:8px;
+}
+
+
+/* ===========================
+   CLASS SELECTORS
+=========================== */
+
+.content-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:24px;
+}
+
+
+.card{
+    background-color:white;
+    padding:24px;
+    border:2px solid #b30000;
+    border-radius:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
+
+
+.profile-photo{
+    display:block;
+    margin:24px auto;
+    width:450px;
+    max-width:100%;
+    height:auto;
+    border-radius:16px;
+    border:4px solid #b30000;
+    box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+
+
+/* ===========================
+   ID SELECTORS
+=========================== */
+
+#about{
+    border-left:8px solid #b30000;
+}
+
+
+#goals{
+    border-left:8px solid #228b22;
+}
+
+
+#contact{
+    border-left:8px solid #b30000;
+}
+
+#skills{
+    border-left:8px solid #228b22;
+}
+
+
+/* ===========================
+   LISTS
+=========================== */
+
+ol,
+ul{
+    margin-left:24px;
+}
+
+
+li{
+    margin-bottom:8px;
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
     background-color:#b30000;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:24px 16px;
 }
-section img{
-    display:block;
-    margin:20px auto;
-    width:450px;
-    max-width:100%;
-    border-radius:15px;
-    border:5px solid #b30000;
-    box-shadow:0 4px 10px rgba(0,0,0,.3);
+
+
+/* ===========================
+   TABLET: 768PX AND BELOW
+=========================== */
+
+@media (max-width:768px){
+
+    main{
+        width:92%;
+        padding:24px;
+    }
+
+    header h1{
+        font-size:40px;
+    }
+
+    .content-grid{
+        grid-template-columns:1fr;
+    }
+
+    nav{
+        gap:8px;
+    }
+
+    section{
+        padding:16px;
+    }
 }
+
+
+/* ===========================
+   MOBILE: 400PX AND BELOW
+=========================== */
+
+@media (max-width:400px){
+
+    header{
+        padding:24px 8px;
+    }
+
+    header h1{
+        font-size:32px;
+    }
+
+    header p{
+        font-size:16px;
+    }
+
+    nav{
+        display:block;
+    }
+
+    nav a{
+        display:block;
+        width:100%;
+        margin:8px 0;
+    }
+
+    main{
+        width:96%;
+        margin:16px auto;
+        padding:16px;
+    }
+
+    section{
+        padding:16px;
+        margin-bottom:16px;
+    }
+
+    section h2{
+        font-size:28px;
+    }
+
+    .card{
+        padding:16px;
+    }
+
+    .profile-photo{
+        width:100%;
+    }
+}
+
+
+/* ===========================
+   LARGE DESKTOP: 1200PX+
+=========================== */
+
+@media (min-width:1200px){
+
+    main{
+        width:75%;
+    }
+
+    header h1{
+        font-size:56px;
+    }
+
+    .content-grid{
+        grid-template-columns:repeat(2, 1fr);
+        gap:32px;
+    }
+}
+

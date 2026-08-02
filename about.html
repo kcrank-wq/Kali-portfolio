@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About Me</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,10 +23,15 @@
 
 <main>
 
-<section>
+<section id="about">
+
     <h2>Who I Am</h2>
 
-    <img src="assets/images/IMG_2802.JPG"
+    <img
+     src="assets/images/IMG_2802.JPG"
+     alt="Kali Crank"
+     class="profile-image"
+     >
 
 
     <p>
@@ -44,9 +52,25 @@
     </p>
 </section>
 
-<section>
+<section id="skills">
+
+
     <h2>Education & Skills</h2>
 
+    <div class="content-grid">
+
+        <article class="card">
+            <h3>Education</h3>
+
+            <p>
+                I am currently pursuing a degree in Information Technology with a
+                focus on cybersecurity. I am learning about computer systems,
+                networks, and security practices that will prepare me for a career
+                in protecting digital information.
+            </p>
+            </article>
+
+<article class="card"> 
     <h3>Technical Skills</h3>
 
     <ul>
@@ -57,7 +81,9 @@
         <li>Warehouse Operations</li>
         <li>SAP Experience</li>
     </ul>
+    </article>
 
+<article class="card">
     <h3>Personal Strengths</h3>
 
     <ul>
@@ -67,6 +93,8 @@
         <li>Dependability</li>
         <li>Problem Solving</li>
     </ul>
+    </article>
+</div>
 
 </section>
 
