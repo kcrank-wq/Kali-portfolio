@@ -307,3 +307,64 @@ footer{
     }
 }
 
+/* =========================
+   ACCESSIBLE CONTACT FORM
+========================= */
+
+#contact {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 25px;
+}
+
+fieldset {
+    border: 2px solid #b30000;
+    padding: 25px;
+    background-color: white;
+}
+
+legend {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #555;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+}
+
+button {
+    background-color: #b30000;
+    color: white;
+    padding: 12px 20px;
+    border: 2px solid #b30000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: 3px solid #005fcc;
+    outline-offset: 3px;
+}
+
