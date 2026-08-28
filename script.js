@@ -1,12 +1,5 @@
 const contactForm = document.querySelector("#contactForm");
 
-
-contactForm.addEventListener("submit", function(event) {
-
-
-    event.preventDefault();
-
-
     const name = document.querySelector("#name");
     const email = document.querySelector("#email");
     const message = document.querySelector("#message");
@@ -14,6 +7,12 @@ contactForm.addEventListener("submit", function(event) {
     const nameError = document.querySelector("#nameError");
     const emailError = document.querySelector("#emailError");
     const messageError = document.querySelector("#messageError");
+
+contactForm.addEventListener("submit", function(event) {
+
+
+    event.preventDefault();
+
 
     let isValid = true;
 
