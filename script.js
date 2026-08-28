@@ -129,7 +129,7 @@ const githubProfile = document.querySelector("#githubProfile");
 if (githubProfile) {
 
     fetch("https://api.github.com/users/kcrank-wq")
-        .thin(function(response) {
+        .then(function(response) {
 
             if (!response.ok) {
                 throw new Error("GitHub information could not be loaded.");
