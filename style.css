@@ -368,3 +368,8 @@ button:focus {
     outline-offset: 3px;
 }
 
+.error {
+    color: #b30000;
+    font-weight: bold;
+    margin-top: 5px;
+}
