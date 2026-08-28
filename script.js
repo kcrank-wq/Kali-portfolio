@@ -21,21 +21,18 @@ contactForm.addEventListener("submit", function(event) {
     if (name.value.trim() === "") {
         nameError.textContent = "Please enter your name.";
         isValid = false;
-        return;
     }
 
 
     if (email.value.trim() === "") {
         emailError.textContent = "Please enter your email.";
         isValid = false;
-        return;
     }
 
 
     if (message.value.trim() === "") {
         messageError.textContent = "Please enter a message.";
         isValid = false;
-        return;
     }
 
     if (!isValid) {
