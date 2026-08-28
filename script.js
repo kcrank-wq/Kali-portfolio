@@ -82,3 +82,36 @@ addSkill.addEventListener("click", function() {
     newSkill.value = "";
 });
 
+const goalsList = document.querySelector("#goalsList");
+const newGoal = document.querySelector("#newGoal");
+const addGoal = document.querySelector("#addGoal");
+
+if (goalsList && newGoal && addGoal) {
+    addGoal.addEventListener("click", function() {
+
+        const goalText = newGoal.value.trim();
+
+        if (goalText === "") {
+            return;
+        }
+
+        const newItem = document.createElement("li");
+        newItem.textContent = goalText;
+
+        const removeButton = document.createElement("button");
+        removeButton.textContent = "Remove";
+        removeButton.type = "button";
+
+        removeButton.addEventListener("click", function() {
+            newItem.remove();
+        });
+
+        newItem.appendChild(removeButton);
+        goalsList.appendChild(newItem);
+
+        newGoal.value = "";
+        
+    });
+}
+
+
