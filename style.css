@@ -373,3 +373,24 @@ button:focus {
     font-weight: bold;
     margin-top: 5px;
 }
+
+#github {
+    border-left: 8px solid #228b22
+}
+
+#githubProfile {
+    text-align: center;
+}
+
+.github-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #b30000;
+    margin-bottom: 15px;
+}
+
+#githubProfile a {
+    color: #b30000;
+    font-weight: bold;
+}

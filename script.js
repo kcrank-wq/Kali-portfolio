@@ -124,4 +124,46 @@ if (goalsList && newGoal && addGoal) {
     });
 }
 
+const githubProfile = document.querySelector("#githubProfile");
+
+if (githubProfile) {
+
+    fetch("https://api.github.com/users/kcrank-wq")
+        .thin(function(response) {
+
+            if (!response.ok) {
+                throw new Error("GitHub information could not be loaded.");
+            }
+
+            return response.json();
+        })
+
+        .then(function(data) {
+
+            githubProfile.innerHTML = `
+                <img
+                    src="${data.avatar_url}'
+                    alt="GitHub profile avatar"
+                    class="github-avatar">
+
+                <h3>${data.login}</h3>
+
+                <p>Public Repositories: ${data.public_repos}</p>
+
+                <p>
+                    <a href="${data.html_url}" target="_blank">
+                        View My GitHub Profile
+                    </a>
+                </p>
+            `;
+        })
+
+        .catch(function(error) {
+
+            githubProfile.textContent = 
+                "Sorry, the GitHub profile could not be loaded.";
+            
+            console.error(error);
+        });
+}
 
