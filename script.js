@@ -8,7 +8,9 @@ const contactForm = document.querySelector("#contactForm");
     const emailError = document.querySelector("#emailError");
     const messageError = document.querySelector("#messageError");
 
-contactForm.addEventListener("submit", function(event) {
+if (contactForm) {
+
+    contactForm.addEventListener("submit", function(event) {
 
 
     event.preventDefault();
@@ -37,7 +39,7 @@ contactForm.addEventListener("submit", function(event) {
     if (!isValid) {
         return;
     }
-
+    
 
 });
 
@@ -52,18 +54,23 @@ email.addEventListener("input", function() {
 message.addEventListener("input", function() {
     messageError.textContent = "";
 });
+}
+
 
 const skillsList = document.querySelector("#skillsList");
 const newSkill = document.querySelector("#newSkill");
 const addSkill = document.querySelector("#addSkill");
 
-addSkill.addEventListener("click", function() {
+if (skillsList && newSkill && addSkill) {
+
+    addSkill.addEventListener("click", function() {
 
     const skillText = newSkill.value.trim();
 
-    if (skillText === "") {
-        return;
-    }
+        if (skillText === "") {
+            return;
+        }
+    
 
     const newItem = document.createElement("li");
     newItem.textContent = skillText;
@@ -81,6 +88,9 @@ addSkill.addEventListener("click", function() {
 
     newSkill.value = "";
 });
+}
+
+
 
 const goalsList = document.querySelector("#goalsList");
 const newGoal = document.querySelector("#newGoal");
