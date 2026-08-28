@@ -52,3 +52,33 @@ email.addEventListener("input", function() {
 message.addEventListener("input", function() {
     messageError.textContent = "";
 });
+
+const skillsList = document.querySelector("#skillsList");
+const newSkill = document.querySelector("#newSkill");
+const addSkill = document.querySelector("#addSkill");
+
+addSkill.addEventListener("click", function() {
+
+    const skillText = newSkill.value.trim();
+
+    if (skillText === "") {
+        return;
+    }
+
+    const newItem = document.createElement("li");
+    newItem.textContent = skillText;
+
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.type = "button";
+
+    removeButton.addEventListener("click", function() {
+        newItem.remove();
+    });
+
+    newItem.appendChild(removeButton);
+    skillsList.appendChild(newItem);
+
+    newSkill.value = "";
+});
+
